@@ -95,27 +95,27 @@ option = st.selectbox(
 'あなたの好きな数字は、', option, 'です'
 
 
-st.write('Map')
-df = pd.DataFrame(
-    np.random.rand(100,2)/[50,50] + [35.69, 139.70],
-    columns=['lat','lon']
-)
-st.map(df)
+# st.write('Map')
+# df = pd.DataFrame(
+#     np.random.rand(100,2)/[50,50] + [35.69, 139.70],
+#     columns=['lat','lon']
+# )
+# st.map(df)
 
 
-st.write('Display Image')
-if st.checkbox('Show Image'):
-    img = Image.open('Screen Shot 2020-10-16 at 10.54.20.png')
-    st.image(img, caption='Takuo Yoneda', use_column_width=True)
+# st.write('Display Image')
+# if st.checkbox('Show Image'):
+#     img = Image.open('Screen Shot 2020-10-16 at 10.54.20.png')
+#     st.image(img, caption='Takuo Yoneda', use_column_width=True)
 
 
-st.write('問い合わせ')
-expander = st.beta_expander('問い合わせ')
-expander.write('問い合わせの回答')
+# st.write('問い合わせ')
+# expander = st.beta_expander('問い合わせ')
+# expander.write('問い合わせの回答')
 
 
-st.write('右に表示')
-left_column, right_column = st.beta_columns(2)
-button = left_column.button('右に表示')
-if button:
-    right_column.write('ここは右カラム')
+# st.write('右に表示')
+# left_column, right_column = st.beta_columns(2)
+# button = left_column.button('右に表示')
+# if button:
+#     right_column.write('ここは右カラム')
