@@ -40,9 +40,9 @@ st.bar_chart(chart_df)
 
 
 latest_iteration = st.empty()
-for i in range(100):
-    latest_iteration.text(f'Iteration {i+1}')
-    time.sleep(0.1)
+for i in chart_df['BID'].tolist():
+    latest_iteration.text(f'Iteration {i}')
+    time.sleep(1)
 
 
 
