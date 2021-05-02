@@ -41,7 +41,7 @@ st.bar_chart(chart_df)
 
 latest_iteration = st.empty()
 for i in chart_df['BID'].tolist():
-    latest_iteration.text(f'Iteration {i}')
+    latest_iteration.text(f'BID {i}')
     time.sleep(1)
 
 
@@ -49,15 +49,15 @@ for i in chart_df['BID'].tolist():
 
 
 
-st.write(' progress bar')
-'Start'
-latest_iteration = st.empty()
-bar = st.progress(0)
-for i in range(100):
-    latest_iteration.text(f'Iteration {i+1}')
-    bar.progress(i + 1)
-    time.sleep(0.1)
-'Done'
+# st.write(' progress bar')
+# 'Start'
+# latest_iteration = st.empty()
+# bar = st.progress(0)
+# for i in range(100):
+#     latest_iteration.text(f'Iteration {i+1}')
+#     bar.progress(i + 1)
+#     time.sleep(0.1)
+# 'Done'
 
 
 
@@ -84,19 +84,19 @@ for i in range(100):
 
 
 
-"""
-# 章
-## 節
-### 項
+# """
+# # 章
+# ## 節
+# ### 項
 
-'''python
-import streamlit as st
-import numpy as np
-import pandas as pd
-'''
-"""
+# '''python
+# import streamlit as st
+# import numpy as np
+# import pandas as pd
+# '''
+# """
 
-st.title('Test')
+# st.title('Test')
 
 option = st.selectbox(
     'あなたが好きな数字',
