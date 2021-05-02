@@ -6,23 +6,29 @@ import time
 
 st.title('Test')
 
+
 st.write(' progress bar')
-
 'Start'
-
 latest_iteration = st.empty()
 bar = st.progress(0)
 for i in range(100):
     latest_iteration.text(f'Iteration {i+1}')
     bar.progress(i + 1)
     time.sleep(0.1)
-    
 'Done'
 
 
 
 
 
+st.write('Charts')
+df = pd.DataFrame(
+    np.random.rand(20,3),
+    columns=['a','b','c']
+)
+st.line_chart(df)
+st.area_chart(df)
+st.bar_chart(df)
 
 
 
@@ -40,14 +46,6 @@ st.table(df.style.highlight_max(axis=0))
 
 
 
-st.write('Charts')
-df = pd.DataFrame(
-    np.random.rand(20,3),
-    columns=['a','b','c']
-)
-st.line_chart(df)
-st.area_chart(df)
-st.bar_chart(df)
 
 
 
