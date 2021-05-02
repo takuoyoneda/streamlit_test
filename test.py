@@ -39,6 +39,16 @@ st.bar_chart(chart_df)
 
 
 
+latest_iteration = st.empty()
+for i in range(100):
+    latest_iteration.text(f'Iteration {i+1}')
+    time.sleep(0.1)
+
+
+
+
+
+
 st.write(' progress bar')
 'Start'
 latest_iteration = st.empty()
