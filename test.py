@@ -15,7 +15,7 @@ chart_df = chart_df.drop('DATE', 1)
 chart_df = chart_df.drop('TIME', 1)
 chart_df = chart_df.drop('CREDIT', 1)
 chart_df = chart_df.drop('PRESSURE', 1)
-chart_df
+# chart_df
 
 #st.write('Charts')
 #df = pd.DataFrame(
