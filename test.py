@@ -10,8 +10,11 @@ st.write(df)
 st.table(df.style.highlight_max(axis=0))
 
 chart_df = df.drop('VOLUME', 1)
-chart_df = chart_df.drop('VWAP', 1)
 # chart_df = chart_df.drop('VWAP', 1)
+chart_df = chart_df.drop('DATE', 1)
+chart_df = chart_df.drop('TIME', 1)
+chart_df = chart_df.drop('CREDIT', 1)
+chart_df = chart_df.drop('PRESSURE', 1)
 chart_df
 
 #st.write('Charts')
