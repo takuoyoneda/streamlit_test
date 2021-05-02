@@ -52,18 +52,7 @@ st.bar_chart(df)
 
 
 
-option = st.selectbox(
-    'あなたが好きな数字',
-    list(range(1,11))
-)
 
-'あなたの好きな数字は、', option, 'です'
-
-text = st.sidebar.text_input('あなたの趣味')
-'あなたの趣味：', text
-
-condition = st.sidebar.slider('あなたの調子', 0, 100, 50)
-'コンディション: ', condition
 
 
 
@@ -82,6 +71,19 @@ import numpy as np
 import pandas as pd
 '''
 """
+
+text = st.sidebar.text_input('あなたの趣味')
+'あなたの趣味：', text
+
+condition = st.sidebar.slider('あなたの調子', 0, 100, 50)
+'コンディション: ', condition
+
+
+option = st.selectbox(
+    'あなたが好きな数字',
+    list(range(1,11))
+)
+'あなたの好きな数字は、', option, 'です'
 
 
 st.write('Map')
