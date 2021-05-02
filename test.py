@@ -96,17 +96,19 @@ for i in chart_df['BID'].tolist():
 # '''
 # """
 
+
 # st.title('Test')
 
-option = st.selectbox(
-    'あなたが好きな数字',
-    list(range(1,11))
-)
-'あなたの好きな数字は、', option, 'です'
+
+# option = st.selectbox(
+#     'あなたが好きな数字',
+#     list(range(1,11))
+# )
+# 'あなたの好きな数字は、', option, 'です'
 
 
-condition = st.sidebar.slider('あなたの調子', 0, 100, 50)
-'コンディション: ', condition
+# condition = st.sidebar.slider('あなたの調子', 0, 100, 50)
+# 'コンディション: ', condition
 
 
 # text = st.sidebar.text_input('あなたの趣味')
