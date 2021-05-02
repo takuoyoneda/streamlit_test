@@ -2,10 +2,10 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 from PIL import Image
-
-
-
 import time
+
+st.title('Test')
+
 st.write(' progress bar')
 
 'Start'
@@ -28,21 +28,19 @@ for i in range(100):
 
 
 
-st.title('Test')
 
 st.write('DataFrame')
-
 df = pd.DataFrame({
     '1列目': [1,2,3,4],
     '2列目': [10,20,30,40]
 })
-
 st.write(df)
 st.dataframe(df.style.highlight_max(axis=0), width=200, height=200)
 st.table(df.style.highlight_max(axis=0))
 
 
 
+st.write('Charts')
 df = pd.DataFrame(
     np.random.rand(20,3),
     columns=['a','b','c']
@@ -67,10 +65,6 @@ text = st.sidebar.text_input('あなたの趣味')
 condition = st.sidebar.slider('あなたの調子', 0, 100, 50)
 'コンディション: ', condition
 
-left_column, right_column = st.beta_columns(2)
-button = left_column.button('右に表示')
-if button:
-    right_column.write('ここは右カラム')
 
 
 
@@ -104,7 +98,13 @@ if st.checkbox('Show Image'):
     st.image(img, caption='Takuo Yoneda', use_column_width=True)
 
 
-st.write('Contact')
+st.write('問い合わせ')
 expander = st.beta_expander('問い合わせ')
 expander.write('問い合わせの回答')
 
+
+st.write('右に表示')
+left_column, right_column = st.beta_columns(2)
+button = left_column.button('右に表示')
+if button:
+    right_column.write('ここは右カラム')
