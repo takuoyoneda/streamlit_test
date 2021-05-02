@@ -4,19 +4,10 @@ import pandas as pd
 from PIL import Image
 import time
 
-st.title('Test')
-
-
-st.write(' progress bar')
-'Start'
-latest_iteration = st.empty()
-bar = st.progress(0)
-for i in range(100):
-    latest_iteration.text(f'Iteration {i+1}')
-    bar.progress(i + 1)
-    time.sleep(0.1)
-'Done'
-
+pd.read_csv('Stock Price - 2021_04_30.csv')
+st.write(df)
+st.dataframe(df.style.highlight_max(axis=0), width=200, height=200)
+st.table(df.style.highlight_max(axis=0))
 
 
 
@@ -34,15 +25,26 @@ st.bar_chart(df)
 
 
 
+st.write(' progress bar')
+'Start'
+latest_iteration = st.empty()
+bar = st.progress(0)
+for i in range(100):
+    latest_iteration.text(f'Iteration {i+1}')
+    bar.progress(i + 1)
+    time.sleep(0.1)
+'Done'
 
-st.write('DataFrame')
-df = pd.DataFrame({
-    '1列目': [1,2,3,4],
-    '2列目': [10,20,30,40]
-})
-st.write(df)
-st.dataframe(df.style.highlight_max(axis=0), width=200, height=200)
-st.table(df.style.highlight_max(axis=0))
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -69,6 +71,8 @@ import numpy as np
 import pandas as pd
 '''
 """
+
+st.title('Test')
 
 text = st.sidebar.text_input('あなたの趣味')
 'あなたの趣味：', text
