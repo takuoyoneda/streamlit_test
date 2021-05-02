@@ -5,7 +5,7 @@ from PIL import Image
 import time
 
 df = pd.read_csv('Stock Price - 2021_04_30.csv')
-st.write(df)
+# st.write(df)
 # st.dataframe(df.style.highlight_max(axis=0), width=200, height=200)
 st.table(df.style.highlight_max(axis=0))
 
