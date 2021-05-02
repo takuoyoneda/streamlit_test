@@ -22,6 +22,8 @@ chart_df
 #    np.random.rand(20,3),
 #     columns=['a','b','c']
 # )
+
+st.altair_chart(chart_df)
 st.line_chart(chart_df)
 st.area_chart(chart_df)
 st.bar_chart(chart_df)
