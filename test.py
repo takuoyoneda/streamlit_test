@@ -9,8 +9,10 @@ st.write(df)
 # st.dataframe(df.style.highlight_max(axis=0), width=200, height=200)
 st.table(df.style.highlight_max(axis=0))
 
-chart_df = df[['ASK'],['BID']]
-
+chart_df = df.drop('VOLUME', 1)
+chart_df = chart_df.drop('VWAP', 1)
+# chart_df = chart_df.drop('VWAP', 1)
+chart_df
 
 #st.write('Charts')
 #df = pd.DataFrame(
