@@ -62,17 +62,9 @@ st.line_chart(df)
 st.area_chart(df)
 st.bar_chart(df)
 
-df = pd.DataFrame(
-    np.random.rand(100,2)/[50,50] + [35.69, 139.70],
-    columns=['lat','lon']
-)
-st.map(df)
 
 st.write('Display Image')
 
-if st.checkbox('Show Image'):
-    img = Image.open('Screen Shot 2020-10-16 at 10.54.20.png')
-    st.image(img, caption='Takuo Yoneda', use_column_width=True)
 
 option = st.selectbox(
     'あなたが好きな数字',
@@ -97,3 +89,19 @@ expander = st.beta_expander('問い合わせ')
 expander.write('問い合わせの回答')
 
 
+
+
+
+
+df = pd.DataFrame(
+    np.random.rand(100,2)/[50,50] + [35.69, 139.70],
+    columns=['lat','lon']
+)
+st.map(df)
+
+
+
+
+if st.checkbox('Show Image'):
+    img = Image.open('Screen Shot 2020-10-16 at 10.54.20.png')
+    st.image(img, caption='Takuo Yoneda', use_column_width=True)
