@@ -9,7 +9,7 @@ st.write(df)
 # st.dataframe(df.style.highlight_max(axis=0), width=200, height=200)
 st.table(df.style.highlight_max(axis=0))
 
-
+chart_df = df[['ASK'],['BID']]
 
 
 #st.write('Charts')
@@ -17,9 +17,9 @@ st.table(df.style.highlight_max(axis=0))
 #    np.random.rand(20,3),
 #     columns=['a','b','c']
 # )
-st.line_chart(df)
-st.area_chart(df)
-st.bar_chart(df)
+st.line_chart(chart_df)
+st.area_chart(chart_df)
+st.bar_chart(chart_df)
 
 
 
