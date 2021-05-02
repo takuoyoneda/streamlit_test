@@ -23,9 +23,16 @@ chart_df
 #     columns=['a','b','c']
 # )
 
+st.write('altair_chart')
 st.altair_chart(chart_df)
+
+st.write('line_chart')
 st.line_chart(chart_df)
+
+st.write('area_chart')
 st.area_chart(chart_df)
+
+st.write('bar_chart')
 st.bar_chart(chart_df)
 
 
@@ -81,18 +88,19 @@ import pandas as pd
 
 st.title('Test')
 
-text = st.sidebar.text_input('あなたの趣味')
-'あなたの趣味：', text
-
-condition = st.sidebar.slider('あなたの調子', 0, 100, 50)
-'コンディション: ', condition
-
-
 option = st.selectbox(
     'あなたが好きな数字',
     list(range(1,11))
 )
 'あなたの好きな数字は、', option, 'です'
+
+
+condition = st.sidebar.slider('あなたの調子', 0, 100, 50)
+'コンディション: ', condition
+
+
+# text = st.sidebar.text_input('あなたの趣味')
+# 'あなたの趣味：', text
 
 
 # st.write('Map')
