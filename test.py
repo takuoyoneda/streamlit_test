@@ -45,6 +45,7 @@ st.line_chart(chart_df)
 
 
         
+st.title('Actual Price')
         
 latest_iteration = st.empty()
 bid = chart_df['BID'].tolist()[0]
