@@ -55,6 +55,8 @@ i = 0
 while(button):
     bid = chart_df['BID'].tolist()[i]
     latest_iteration.text(f'BID {bid}')
+    if i > len(chart_df['BID'].tolist())
+        button = False
     time.sleep(1)
     i+=1    
 
