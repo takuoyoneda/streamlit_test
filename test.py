@@ -46,18 +46,18 @@ st.line_chart(chart_df)
 
         
         
-button = st.button('start')
 latest_iteration = st.empty()
 bid = chart_df['BID'].tolist()[0]
 latest_iteration.text(f'BID {bid}')
 
+button = st.button('start')
 i = 0
 while(button):
     bid = chart_df['BID'].tolist()[i]
     latest_iteration.text(f'BID {bid}')
     if i > len(chart_df['BID'].tolist()):
         button = False
-    time.sleep(1)
+    time.sleep(0.1)
     i+=1    
 
 
