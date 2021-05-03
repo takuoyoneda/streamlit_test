@@ -34,15 +34,15 @@ latest_iteration = st.empty()
 bid = df['BID'].tolist()[0]
 latest_iteration.text(f'BID {bid}')
 
-button = st.button('start')
+button_down = st.button('start')
 i = 0
-while(button):
+while(button_down):
     bid = df['BID'].tolist()[i]
     latest_iteration.text(f'BID {bid}')
     time.sleep(0.1)
     i+=1    
     if i >= len(df['BID'].tolist()):
-        button = False
+        button_down = False
 
 
 
