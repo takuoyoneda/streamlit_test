@@ -48,9 +48,11 @@ if button:
         
 button = st.button('start')
 latest_iteration = st.empty()
+
 i = 0
 while(button):
-    latest_iteration.text(f'BID ' + 'chart_df['BID'].tolist()[i]')
+    dib = chart_df['BID'].tolist()[i]
+    latest_iteration.text(f'BID {bid}')
     time.sleep(1)
     i+=1    
 
