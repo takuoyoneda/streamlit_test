@@ -36,6 +36,9 @@ st.line_chart(chart_df)
 # st.bar_chart(chart_df)
 
 
+button = button('右に表示')
+if button:
+    write('ここは右カラム')
 
 
 
