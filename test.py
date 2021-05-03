@@ -34,7 +34,7 @@ latest_iteration = st.empty()
 bid = df['BID'].tolist()[0]
 latest_iteration.text(f'BID {bid}')
 
-button_down = st.button('start')
+button_down = st.button('count down')
 i = 0
 while(button_down):
     bid = df['BID'].tolist()[i]
