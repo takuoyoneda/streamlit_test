@@ -14,17 +14,17 @@ st.table(df.style.highlight_max(axis=0))
 st.title('Counter')
         
 latest_iteration = st.empty()
-bid = chart_df['BID'].tolist()[0]
+bid = df['BID'].tolist()[0]
 latest_iteration.text(f'BID {bid}')
 
 button = st.button('start')
 i = 0
 while(button):
-    bid = chart_df['BID'].tolist()[i]
+    bid = df['BID'].tolist()[i]
     latest_iteration.text(f'BID {bid}')
     time.sleep(0.1)
     i+=1    
-    if i >= len(chart_df['BID'].tolist()):
+    if i >= len(df['BID'].tolist()):
         button = False
 
         
