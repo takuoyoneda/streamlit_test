@@ -11,7 +11,7 @@ st.table(df.style.highlight_max(axis=0))
 
 
         
-st.title('Counter')
+st.title('Tracer')
         
 latest_iteration = st.empty()
 bid = df['BID'].tolist()[0]
@@ -28,10 +28,12 @@ while(button):
         button = False
 
         
+
+        
 st.title('Count Down')
 
 latest_iteration = st.empty()
-bid = 120000
+bid = 110000
 latest_iteration.text(f'BID {bid}')
 
 button_down = st.button('count down')
@@ -39,8 +41,8 @@ i = 0
 while(button_down):
     bid -= 100
     latest_iteration.text(f'BID {bid}')
-    time.sleep(0.1)
-    i+=1    
+    time.sleep(1)
+    i+=1
     if bid <= 100000:
         button_down = False
 
