@@ -36,16 +36,12 @@ st.line_chart(chart_df)
 # st.bar_chart(chart_df)
 
 
-button = st.button('右に表示')
-if button:
-    st.write('ここは右カラム')
-
-
-
+button = st.button('start')
 latest_iteration = st.empty()
-for i in chart_df['BID'].tolist():
-    latest_iteration.text(f'BID {i}')
-    time.sleep(1)
+if button:
+    for i in chart_df['BID'].tolist():
+        latest_iteration.text(f'BID {i}')
+        time.sleep(1)
 
 
 
