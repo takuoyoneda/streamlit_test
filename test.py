@@ -41,7 +41,7 @@ while(button_down):
     latest_iteration.text(f'BID {bid}')
     time.sleep(0.1)
     i+=1    
-    if i >= len(df['BID'].tolist()):
+    if i >= 100000:
         button_down = False
 
 
