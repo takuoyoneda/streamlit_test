@@ -31,13 +31,13 @@ while(button):
 st.title('Count Down')
 
 latest_iteration = st.empty()
-bid = df['BID'].tolist()[0]
+bid = 120000
 latest_iteration.text(f'BID {bid}')
 
 button_down = st.button('count down')
 i = 0
 while(button_down):
-    bid = df['BID'].tolist()[i]
+    bid -= 100
     latest_iteration.text(f'BID {bid}')
     time.sleep(0.1)
     i+=1    
