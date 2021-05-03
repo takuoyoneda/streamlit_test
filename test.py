@@ -9,43 +9,9 @@ df = pd.read_csv('Stock Price - 2021_04_30.csv')
 # st.dataframe(df.style.highlight_max(axis=0), width=200, height=200)
 st.table(df.style.highlight_max(axis=0))
 
-chart_df = df.drop('VOLUME', 1)
-# chart_df = chart_df.drop('VWAP', 1)
-chart_df = chart_df.drop('DATE', 1)
-chart_df = chart_df.drop('TIME', 1)
-chart_df = chart_df.drop('CREDIT', 1)
-chart_df = chart_df.drop('PRESSURE', 1)
-# chart_df
-
-#st.write('Charts')
-#df = pd.DataFrame(
-#    np.random.rand(20,3),
-#     columns=['a','b','c']
-# )
-
-st.write('altair_chart')
-st.altair_chart(chart_df)
-
-st.write('line_chart')
-st.line_chart(chart_df)
-
-# st.write('area_chart')
-# st.area_chart(chart_df)
-
-# st.write('bar_chart')
-# st.bar_chart(chart_df)
-
-
-# button = st.button('start')
-# latest_iteration = st.empty()
-# if button:
-#     for i in chart_df['BID'].tolist():
-#         latest_iteration.text(f'BID {i}')
-#         time.sleep(1)
-
 
         
-st.title('Actual Price')
+st.title('Counter')
         
 latest_iteration = st.empty()
 bid = chart_df['BID'].tolist()[0]
@@ -61,28 +27,50 @@ while(button):
     if i >= len(chart_df['BID'].tolist()):
         button = False
 
+        
+st.title('Count Down')
+        
+
+#st.write('Charts')
+#df = pd.DataFrame(
+#    np.random.rand(20,3),
+#     columns=['a','b','c']
+# )
 
 
-
-# st.write(' progress bar')
-# 'Start'
-# latest_iteration = st.empty()
-# bar = st.progress(0)
-# for i in range(100):
-#     latest_iteration.text(f'Iteration {i+1}')
-#     bar.progress(i + 1)
-#     time.sleep(0.1)
-# 'Done'
-
-
-
-
+st.title('Count Up')
 
 
 
 
 
 
+
+
+
+
+
+st.title('Charts')
+
+chart_df = df.drop('VOLUME', 1)
+# chart_df = chart_df.drop('VWAP', 1)
+chart_df = chart_df.drop('DATE', 1)
+chart_df = chart_df.drop('TIME', 1)
+chart_df = chart_df.drop('CREDIT', 1)
+chart_df = chart_df.drop('PRESSURE', 1)
+# chart_df
+
+st.write('altair_chart')
+st.altair_chart(chart_df)
+
+st.write('line_chart')
+st.line_chart(chart_df)
+
+# st.write('area_chart')
+# st.area_chart(chart_df)
+
+# st.write('bar_chart')
+# st.bar_chart(chart_df)
 
 
 
@@ -110,6 +98,17 @@ while(button):
 # import pandas as pd
 # '''
 # """
+
+
+# st.write(' progress bar')
+# 'Start'
+# latest_iteration = st.empty()
+# bar = st.progress(0)
+# for i in range(100):
+#     latest_iteration.text(f'Iteration {i+1}')
+#     bar.progress(i + 1)
+#     time.sleep(0.1)
+# 'Done'
 
 
 # st.title('Test')
