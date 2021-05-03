@@ -36,12 +36,12 @@ st.line_chart(chart_df)
 # st.bar_chart(chart_df)
 
 
-button = st.button('start')
-latest_iteration = st.empty()
-if button:
-    for i in chart_df['BID'].tolist():
-        latest_iteration.text(f'BID {i}')
-        time.sleep(1)
+# button = st.button('start')
+# latest_iteration = st.empty()
+# if button:
+#     for i in chart_df['BID'].tolist():
+#         latest_iteration.text(f'BID {i}')
+#         time.sleep(1)
 
 
         
