@@ -60,9 +60,6 @@ chart_df = chart_df.drop('CREDIT', 1)
 chart_df = chart_df.drop('PRESSURE', 1)
 # chart_df
 
-st.write('altair_chart')
-st.altair_chart(chart_df)
-
 st.write('line_chart')
 st.line_chart(chart_df)
 
@@ -72,6 +69,8 @@ st.line_chart(chart_df)
 # st.write('bar_chart')
 # st.bar_chart(chart_df)
 
+st.write('altair_chart')
+st.altair_chart(chart_df)
 
 
 
