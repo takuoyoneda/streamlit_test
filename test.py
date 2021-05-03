@@ -29,16 +29,26 @@ while(button):
 
         
 st.title('Count Down')
-        
 
-#st.write('Charts')
-#df = pd.DataFrame(
-#    np.random.rand(20,3),
-#     columns=['a','b','c']
-# )
+latest_iteration = st.empty()
+bid = df['BID'].tolist()[0]
+latest_iteration.text(f'BID {bid}')
+
+button = st.button('start')
+i = 0
+while(button):
+    bid = df['BID'].tolist()[i]
+    latest_iteration.text(f'BID {bid}')
+    time.sleep(0.1)
+    i+=1    
+    if i >= len(df['BID'].tolist()):
+        button = False
 
 
-st.title('Count Up')
+
+
+
+# st.title('Count Up')
 
 
 
@@ -97,6 +107,13 @@ st.altair_chart(chart_df)
 # import pandas as pd
 # '''
 # """
+
+
+# st.write('Charts')
+# df = pd.DataFrame(
+#    np.random.rand(20,3),
+#     columns=['a','b','c']
+# )
 
 
 # st.write(' progress bar')
