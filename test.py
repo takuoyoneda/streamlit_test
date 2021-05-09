@@ -33,7 +33,7 @@ while(button):
 st.title('Count Down')
 
 latest_iteration = st.empty()
-bid = 110000
+bid = 120000
 latest_iteration.text(f'BID {bid}')
 
 button_down = st.button('count down')
