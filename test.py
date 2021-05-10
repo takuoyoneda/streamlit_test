@@ -33,7 +33,7 @@ while(button):
 st.title('Counter')
 
 latest_iteration = st.empty()
-bid = 110000
+bid = 111000
 latest_iteration.text(f'BID {bid}')
 
 # button_down = st.button('start')
@@ -48,9 +48,9 @@ while(button_down):
     latest_iteration.text(f'BID {bid}')
     time.sleep(1)
     i+=1
-    if bid >= 120000:
+    if bid >= 112000:
         is_upward = False
-    if bid <= 100000:
+    if bid <= 110000:
         button_down = False
 
 
