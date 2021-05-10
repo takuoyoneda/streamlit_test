@@ -36,7 +36,7 @@ latest_iteration = st.empty()
 bid = 110000
 latest_iteration.text(f'BID {bid}')
 
-button_down = st.button('start')
+# button_down = st.button('start')
 button_down = True
 i = 0
 is_upward = True
