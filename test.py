@@ -4,6 +4,33 @@ import pandas as pd
 from PIL import Image
 import time
 
+
+st.title('Counter')
+
+latest_iteration = st.empty()
+bid = 100000
+latest_iteration.text(f'BID {bid}')
+
+# button_down = st.button('start')
+button_down = True
+is_upward = True
+while(button_down):
+    if is_upward:
+        bid += 100
+    else:
+        bid -= 100
+    latest_iteration.text(f'BID {bid}')
+    time.sleep(1)
+    if bid >= 103000:
+        is_upward = False
+    if bid <= 100000:
+        is_upward = True
+#         button_down = False
+
+
+
+
+
 df = pd.read_csv('Stock Price - 2021_04_30.csv')
 # st.write(df)
 # st.dataframe(df.style.highlight_max(axis=0), width=200, height=200)
@@ -30,27 +57,6 @@ while(button):
         
 
         
-st.title('Count Down')
-
-latest_iteration = st.empty()
-bid = 110000
-latest_iteration.text(f'BID {bid}')
-
-# button_down = st.button('start')
-button_down = True
-is_upward = True
-while(button_down):
-    if is_upward:
-        bid += 100
-    else:
-        bid -= 100
-    latest_iteration.text(f'BID {bid}')
-    time.sleep(1)
-    if bid >= 114000:
-        is_upward = False
-    if bid <= 110000:
-        is_upward = True
-#         button_down = False
 
 
 
