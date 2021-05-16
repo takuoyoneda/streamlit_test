@@ -20,7 +20,7 @@ while(button_down):
     else:
         bid -= 100
     latest_iteration.text(f'BID {bid}')
-    time.sleep(2)
+    time.sleep(3)
     if bid >= 103000:
         is_upward = False
     if bid <= 100000:
